@@ -1,5 +1,5 @@
 <script>
-
+    import Second from "$lib/components/second.svelte";
 </script>
 
 
@@ -17,19 +17,19 @@
         Storozhyk Egor
     </h1>
 
-    <section>
-        <h2>
+    <section class="section">
+        <h2 class="article-header">
             Skills
         </h2>  
-        <ul>
+        <ul class="section-content">
             <li>
-                something
+                Front 1 svelte 
             </li>
             <li>
-                something
+                Beckend 1 django, celery, redis, postgres, nginx
             </li>
             <li>
-                something
+                Languages 1 ENG BG UA 
             </li>
             <li>
                 something
@@ -39,20 +39,31 @@
     </section>
 </article>
 
+<Second>
+</Second>
+
+
 <style lang="scss">
     article {
         margin-block: 1rem;
         display: flex;
-        flex-direction: row;
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+        @media screen and (min-width: 600px) {
+            flex-direction: row;
+        }
         justify-content: space-between;
         gap: 1rem;
         .article-header {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            text-align: center;
             display: flex;
             flex-direction: column;
-            align-items: start;
-            gap: 0.4rem;
-            text-align: center;
+            justify-content: space-between;
             .info-div {
                 display: flex;
                 flex-direction: row;
@@ -70,9 +81,16 @@
                     gap: 1.2rem;
                     box-sizing: border-box;
                     background-color: $first;
-                    border-radius: $radius;
+                    
+                    @media screen and (max-width: 600px) {
+                        border-top-left-radius: $radius;
+                        border-bottom-left-radius: $radius;
+                    }
+                    @media screen and (min-width: 600px) {
+                        border-radius: $radius;
+                
+                    }
                     padding: 0.4rem;
-                    height: 100%;
                     width: 60%;
                     font-size: 1rem;
                     p {
@@ -83,10 +101,27 @@
             }
         }
         section {
-            width: 100%;
+            @media screen and (max-width: 600px) {
+                border-radius: 0;
+            }
+            @media screen and (min-width: 600px) {
+                border-radius: $radius;
+                
+            }
             background-color: $second;
-            border-radius: $radius;
             padding: 20px;
+            display: flex;
+            gap: 1rem;
+            flex-direction: row;
+            .section-content {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                gap: 1rem;
+                font-size: 1.4rem;
+                list-style: none;
+            }
         }
     }
 

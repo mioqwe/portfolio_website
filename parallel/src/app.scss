@@ -8,13 +8,29 @@
   font-family: ahonde;
   src: url(ahonde.ttf);
  }
-body, p, h1, h2, h3, h4,h5, h6 {
+
+@font-face {
+  font-family: play;
+  src: url(play.ttf);
+ }
+@font-face {
+  font-family: orbit;
+  src: url(orbit.ttf);
+ }
+
+body, p, h1, h2, h3, h4,h5, h6, ul, li {
     margin: 0;
     padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
 }
+
 body, button, a {
     // font-family: "tech", "Verdana";
-    font-family: "ahonde", "Verdana";
+    font-family: "orbit", "Verdana";
 
 }
 
