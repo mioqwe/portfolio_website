@@ -1,0 +1,29 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+
+@font-face {
+  font-family: tech;
+  src: url(tech.ttf);
+ }
+@font-face {
+  font-family: ahonde;
+  src: url(ahonde.ttf);
+ }
+body, p, h1, h2, h3, h4,h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+body, button, a {
+    // font-family: "tech", "Verdana";
+    font-family: "ahonde", "Verdana";
+
+}
+
+body {
+	background-color: $bg;
+}
+
+
+.main, header, footer {
+	max-width: 992px;
+	margin: 0 auto;
+} 
